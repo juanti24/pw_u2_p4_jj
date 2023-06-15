@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <header></header>
+    <nav></nav>
+    <section>
+        <div id="myAplication2">
+            <h4>Estudiantes UCE</h4>
+            <input type="text" v-model="nombre" v-on:keypress.enter="agregarEstudiante2">
+            <h1>{{nombre}}</h1>
+            <hr>
+            <h1>Lista estudiantes</h1>
+            <!--<ul>
+                <li>{{miarreglo[0].nombre +" "+ miarreglo[0].apellido}}</li>
+                <li>{{miarreglo[1].apellido}}</li>
+                <li>{{miarreglo[2]}}</li>
+                <li>{{miarreglo[3]}}</li>
+                <li>{{miarreglo[4]}}</li>
+                <li>{{miarreglo[5]}}</li>
+                <li>{{miarreglo[6]}}</li>
+                <li>{{miarreglo[7]}}</li>
+                <li>{{miarreglo[8]}}</li>
+                <li>{{miarreglo[9]}}</li>
+            </ul>-->
+
+            <ul>
+                <li v-for="({nombre,apellido}, index) in miarreglo">
+                    <span>{{index+1}}-{{nombre}}</span>
+                    <blockquote v-show="apellido!==undefined">Apellido:{{apellido}}</blockquote>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <footer></footer>
+
+    <script src="../js/vFor.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/calculadoraVue.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+    <header class ="cabecera">Calculadora</header>
+    <nav></nav>
+
+    <section>
+        <div id="myAppCalculadora" class="container">
+            
+            <div class="calculadora">
+
+                <label class="pantalla" id="idpantalla" for="" v-on:click="borrar">{{numero}}</label>
+
+                <button class="boton" v-on:click="operacionCalcular">1</button>
+                <button class="boton" v-on:click="operacionCalcular">2</button>
+                <button class="boton" v-on:click="operacionCalcular">3</button>
+
+                <button class="boton" id="idsuma" v-on:click="operacionCalcular">+</button>
+
+                <button class="boton" v-on:click="operacionCalcular">4</button>
+                <button class="boton" v-on:click="operacionCalcular">5</button>
+                <button class="boton" v-on:click="operacionCalcular">6</button>
+
+                <button class="boton" id="idresta" v-on:click="operacionCalcular">-</button>
+
+                <button class="boton" v-on:click="operacionCalcular">7</button>
+                <button class="boton" v-on:click="operacionCalcular">8</button>
+                <button class="boton" v-on:click="operacionCalcular">9</button>
+
+                <button class="boton" id="iddiv" v-on:click="operacionCalcular">/</button>
+                <button class="boton" v-on:click="operacionCalcular">0</button>
+                <button class="boton" v-on:click="borrar">C</button>
+                
+                <button class="boton" id="idigual" v-on:click="operacionCalcular">=</button>
+                <button class="boton" id="idmulti" v-on:click="operacionCalcular">*</button>
+
+
+            </div>
+        </div>
+
+
+    </section>
+    <footer></footer>
+
+    <script src="../js/appCalculadora.js"></script>
+
+</body>
+
+</html>

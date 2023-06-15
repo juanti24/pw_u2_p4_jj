@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+
+<body>
+
+    <header></header>
+    <nav></nav>
+    <section>
+
+        <div id="myAppFormulario" class="container">
+            <div class="formEstudiante">
+                <header>
+                    <h1>Estudiante</h1>
+                </header>
+                <nav></nav>
+                <section>
+                    <form class="form">
+                        <h2>Nuevo Estudiante</h2>
+                        <!--<label for="">Nombre:</label>
+                        <input type="text">-->
+
+                        <p type="Nombre:"> <input type="text" v-model="nombre" placeholder="Ingrese su nombre"> </p>
+                        <p type="Apellido:"> <input type="text" v-model="apellido" placeholder="Ingrese su apellido"> </p>
+                        <p type="Edad:"> <input type="number" v-model="edad" placeholder="Ingrese su edad"> </p>
+                        <p type="Genero:"> <input type="text" v-model="genero" placeholder="Ingrese su genero"> </p>
+
+                        <button type="button" v-on:click="agregarEstudiante">Guardar</button>
+
+
+                    </form>
+                    <h1>Lista estudiantes</h1>
+
+                    <ul>
+                        <li v-for="({nombre,apellido,edad,genero}, index) in miarreglo">
+                            <span>{{index+1}}). {{nombre}}  -   {{apellido}}    -   {{edad}}    -   {{genero}}</span>
+                        </li>
+                    </ul>
+                </section>
+                <footer></footer>
+            </div>
+
+        </div>
+
+
+
+
+        <!--<div id="myAppFormulario">
+            <h4>Estudiantes UCE</h4>
+            <input type="text" v-model="nombre" v-on:keypress.enter="agregarEstudiante2">
+            <h1>{{nombre}}</h1>
+            <hr>
+            <h1>Lista estudiantes</h1>
+
+            <ul>
+                <li v-for="({nombre,apellido}, index) in miarreglo">
+                    <span>{{index+1}}-{{nombre}}</span>
+                    <blockquote>{{apellido}}</blockquote>
+                </li>
+            </ul>
+
+        </div>-->
+    </section>
+    <footer></footer>
+
+    <script src="../js/appFormulario.js"></script>
+
+</body>
+
+</html>
